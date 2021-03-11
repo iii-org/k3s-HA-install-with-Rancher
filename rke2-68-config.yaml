@@ -1,0 +1,13 @@
+token: "interiiik8scsienuuedutwbypfsense"
+write-kubeconfig-mode: "0644"
+tls-san:
+  - "dev2.iiidevops.org"
+node-label:
+  - "nodeid=68"
+  - "org=iii"
+node-name: "k3s-68"
+node-ip: "10.20.0.68"
+#disable:
+#  - "metrics-server"
+#  - "local-storage"
+#  - "servicelb"
