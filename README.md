@@ -55,6 +55,7 @@ disable:
 ```
 
 ## 其他的Server節點
+curl -sfL https://get.k3s.io | sh -s - server
 ```
 server: https://inter-iii.k8s.csie.nuu.edu.tw:6443
 token: "interiiik8scsienuuedutwbypfsense"
