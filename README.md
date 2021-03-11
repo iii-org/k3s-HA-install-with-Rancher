@@ -28,36 +28,17 @@ Addresses:  10.20.0.73
 ## 每個節點建立config檔案
 ```sh
 mkdir -p /etc/rancher/k3s
+nano /etc/rancher/k3s/config.yaml
 ```
 
 ## 建立第一個Server節點
-10.20.0.68 
 curl -sfL https://get.k3s.io | sh -s - server --cluster-init
-```sh
-nano /etc/rancher/k3s/config.yaml
-k3s server --cluster-init
-```
-config.yaml: 部屬設定文件
-```sh
-token: "interiiik8scsienuuedutwbypfsense"
-write-kubeconfig-mode: "0644"
-tls-san:
-  - "inter-iii.k8s.csie.nuu.edu.tw"
-node-label:
-  - "nodeid=68"
-  - "org=iii"
-node-name: "k3s-68"
-node-ip: "10.20.0.68"
-disable:
-  - "metrics-server"
-  - "local-storage"
-  - "servicelb"
-```
+### 部屬文件
+[10.20.0.68的部屬文件](rke2-68-config.yaml)
 
 ## 其他的Server節點
 curl -sfL https://get.k3s.io | sh -s - server
 ### 部屬文件
-[10.20.0.68的部屬文件](rke2-68-config.yaml)
 [10.20.0.73的部屬文件](rke2-73-config.yam)]
 [10.20.0.74的部屬文件](rke2-74-config.yam)]
 
