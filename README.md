@@ -53,6 +53,27 @@ disable:
   - "servicelb"
 ```
 
+## 其他的Server節點
+```
+server: https://inter-iii.k8s.csie.nuu.edu.tw:6443
+token: "interiiik8scsienuuedutwbypfsense"
+write-kubeconfig-mode: "0644"
+tls-san:
+  - "inter-iii.k8s.csie.nuu.edu.tw"
+node-label:
+  - "nodeid=73"
+  - "org=iii"
+node-name: "k3s-73"
+node-ip: "10.20.0.73"
+disable:
+  - "metrics-server"
+  - "local-storage"
+  - "servicelb"
+```
+
+
+## Agent節點(目前不屬不考慮Agent角色)
+
 
 ## Set First Master
 curl -sfL https://get.k3s.io | sh -
