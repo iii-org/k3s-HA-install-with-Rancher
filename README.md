@@ -10,6 +10,7 @@
 
 ## DNS For HA
 inter-iii.k8s.csie.nuu.edu.tw
+dev2.iiidevops.org
 ```
 C:\Users\m0724>nslookup inter-iii.k8s.csie.nuu.edu.tw
 伺服器:  dnas1.iii.org.tw
