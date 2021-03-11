@@ -73,7 +73,7 @@ disable:
 
 ## 安裝憑證管理系統(支援cloudflare、http01、自簽等)
 `helm3 install cert-manager jetstack/cert-manager   --namespace cert-manager   --version v1.0.4 --kubeconfig /home/localadmin/config`
-
+`helm3 install rancher rancher-stable/rancher   --namespace cattle-system --set hostname=dev2.iiidevops.org --kubeconfig /home/localadmin/config`
 
 ## Agent節點(目前不屬不考慮Agent角色)
 
