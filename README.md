@@ -1,2 +1,4 @@
 # k8s-install
-k3s 安裝 
+* High Availability  
+[V] K3s  
+[V] Rancher  
