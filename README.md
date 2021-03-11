@@ -56,6 +56,8 @@ disable:
 
 ## 其他的Server節點
 curl -sfL https://get.k3s.io | sh -s - server
+### 部屬文件
+[10.20.0.68](rke2-68-config.yaml)
 ```
 server: https://inter-iii.k8s.csie.nuu.edu.tw:6443
 token: "interiiik8scsienuuedutwbypfsense"
