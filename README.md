@@ -24,10 +24,15 @@ Addresses:  10.20.0.73
 
 ⚠️ $K3S_CONFIG_FILE=/etc/rancher/k3s/config.yaml
 
+## 每個節點建立config檔案
+```sh
+mkdir -p /etc/rancher/k3s
+```
+
 ## 建立第一個Server節點
 10.20.0.68 
-```
-mkdir -p /etc/rancher/k3s/config.yaml
+```sh
+nano /etc/rancher/k3s/config.yaml
 K3S_TOKEN=SECRET k3s server --cluster-init
 ```
 ```
