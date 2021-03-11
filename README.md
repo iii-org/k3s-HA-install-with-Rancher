@@ -15,8 +15,6 @@ C:\Users\m0724>nslookup inter-iii.k8s.csie.nuu.edu.tw
 伺服器:  dnas1.iii.org.tw
 Address:  140.92.66.74
 
-DNS request timed out.
-    timeout was 2 seconds.
 未經授權的回答:
 名稱:    inter-iii.k8s.csie.nuu.edu.tw
 Addresses:  10.20.0.73
