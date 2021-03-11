@@ -11,7 +11,7 @@
 ## DNS For HA
 inter-iii.k8s.csie.nuu.edu.tw  
 dev2.iiidevops.org  
-```
+```cmd
 C:\Users\m0724>nslookup inter-iii.k8s.csie.nuu.edu.tw
 伺服器:  dnas1.iii.org.tw
 Address:  140.92.66.74
@@ -32,12 +32,16 @@ nano /etc/rancher/k3s/config.yaml
 ```
 
 ## 建立第一個Server節點
+```sh
 curl -sfL https://get.k3s.io | sh -s - server --cluster-init
+```
 ### 部屬文件
 * [10.20.0.68的部屬文件](rke2-68-config.yaml)
 
-## 其他的Server節點
+## 其他的Server節點(建立HA)
+```sh
 curl -sfL https://get.k3s.io | sh -s - server
+```
 ### 部屬文件
 * [10.20.0.73的部屬文件](rke2-73-config.yam)]
 * [10.20.0.74的部屬文件](rke2-74-config.yam)]
