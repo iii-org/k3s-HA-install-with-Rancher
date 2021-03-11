@@ -52,10 +52,6 @@ curl -sfL https://get.k3s.io | sh -s - server
 
 ## Agent節點(目前不屬不考慮Agent角色)
 
-
-## Set First Master
-curl -sfL https://get.k3s.io | sh -
-
 ## reference
 * https://rancher.com/docs/k3s/latest/en/installation/ha-embedded/
 * https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/
