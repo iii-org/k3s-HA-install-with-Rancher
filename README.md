@@ -22,5 +22,24 @@ Addresses:  10.20.0.73
           10.20.0.74
 ```
 
-## reference
+⚠️ $K3S_CONFIG_FILE=/etc/rancher/k3s/config.yaml
 
+## Configure Node For k3s
+10.20.0.68 /etc/rancher/k3s/config.yaml
+> K3S_TOKEN=SECRET k3s server --cluster-init
+```
+K3S_TOKEN: "interiiik8scsienuuedutwbypfsense"
+write-kubeconfig-mode: "0644"
+tls-san:
+  - "inter-iii.k8s.csie.nuu.edu.tw"
+node-label:
+  - "nodeid=68"
+  - "org=iii"
+```
+
+
+## Set First Master
+curl -sfL https://get.k3s.io | sh -
+
+## reference
+https://rancher.com/docs/k3s/latest/en/installation/ha-embedded/
