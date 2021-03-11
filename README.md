@@ -57,23 +57,9 @@ disable:
 ## 其他的Server節點
 curl -sfL https://get.k3s.io | sh -s - server
 ### 部屬文件
-[10.20.0.68](rke2-68-config.yaml)
-```
-server: https://inter-iii.k8s.csie.nuu.edu.tw:6443
-token: "interiiik8scsienuuedutwbypfsense"
-write-kubeconfig-mode: "0644"
-tls-san:
-  - "inter-iii.k8s.csie.nuu.edu.tw"
-node-label:
-  - "nodeid=73"
-  - "org=iii"
-node-name: "k3s-73"
-node-ip: "10.20.0.73"
-disable:
-  - "metrics-server"
-  - "local-storage"
-  - "servicelb"
-```
+[10.20.0.68的部屬文件](rke2-68-config.yaml)
+[10.20.0.73的部屬文件](rke2-73-config.yam)]
+[10.20.0.74的部屬文件](rke2-74-config.yam)]
 
 ## 安裝憑證管理系統(支援cloudflare、http01、自簽等)
 `helm3 install cert-manager jetstack/cert-manager   --namespace cert-manager   --version v1.0.4 --kubeconfig /home/localadmin/config`
