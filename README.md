@@ -46,6 +46,10 @@ node-label:
   - "org=iii"
 node-name: "k3s-68"
 node-ip: "10.20.0.68"
+disable:
+  - "metrics-server"
+  - "local-storage"
+  - "servicelb"
 ```
 
 
