@@ -79,7 +79,7 @@ disable:
 curl -sfL https://get.k3s.io | sh -
 
 ## reference
-https://rancher.com/docs/k3s/latest/en/installation/ha-embedded/
-https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/
-https://rancher.com/docs/rke/latest/en/installation/
-https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/
+* https://rancher.com/docs/k3s/latest/en/installation/ha-embedded/
+* https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/
+* https://rancher.com/docs/rke/latest/en/installation/
+* https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/
