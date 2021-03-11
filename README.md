@@ -31,14 +31,14 @@ mkdir -p /etc/rancher/k3s
 nano /etc/rancher/k3s/config.yaml
 ```
 
-## 建立第一個Server節點
+## 建立第一個Server節點(初始節點)
 ```sh
 curl -sfL https://get.k3s.io | sh -s - server --cluster-init
 ```
 ### 部屬文件
 * [10.20.0.68的部屬文件](rke2-68-config.yaml)
 
-## 其他的Server節點(建立HA)
+## 其他的Server節點(湊成三個來建立HA)
 ```sh
 curl -sfL https://get.k3s.io | sh -s - server
 ```
