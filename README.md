@@ -33,7 +33,7 @@ mkdir -p /etc/rancher/k3s
 10.20.0.68 
 ```sh
 nano /etc/rancher/k3s/config.yaml
-K3S_TOKEN=SECRET k3s server --cluster-init
+k3s server --cluster-init
 ```
 config.yaml: 部屬設定文件
 ```sh
