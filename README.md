@@ -35,14 +35,17 @@ mkdir -p /etc/rancher/k3s
 nano /etc/rancher/k3s/config.yaml
 K3S_TOKEN=SECRET k3s server --cluster-init
 ```
-```
-K3S_TOKEN: "interiiik8scsienuuedutwbypfsense"
+config.yaml: 部屬設定文件
+```sh
+token: "interiiik8scsienuuedutwbypfsense"
 write-kubeconfig-mode: "0644"
 tls-san:
   - "inter-iii.k8s.csie.nuu.edu.tw"
 node-label:
   - "nodeid=68"
   - "org=iii"
+node-name: "k3s-68"
+node-ip: "10.20.0.68"
 ```
 
 
