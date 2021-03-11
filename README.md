@@ -31,6 +31,7 @@ mkdir -p /etc/rancher/k3s
 
 ## 建立第一個Server節點
 10.20.0.68 
+curl -sfL https://get.k3s.io | sh -s - server --cluster-init
 ```sh
 nano /etc/rancher/k3s/config.yaml
 k3s server --cluster-init
