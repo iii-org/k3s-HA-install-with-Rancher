@@ -3,6 +3,7 @@
 ⚠️ ⚠️ 若要使用DNS-update或是http01 letsEncrypt等本機端有效憑證自動更新儲存請查詢`Cert-manager`或是`Rancher官網`  
 ⚠️ ⚠️ 此教學限制Rancher至舊版2.4.X，因此同時對K3s支援的版本有限制，因此建議僅用於開發，不可用於Production環境。  
 ⚠️ ⚠️ 最新版本的k3s不支援本教學，因此若已有最新版本的k3s請勿使用教學安裝(會無法安裝Rancher)  
+⚠️ ⚠️ 不採用與Demo一樣舊版的1.18.5，主要是v1.19.1的k3s安裝可以寫config檔案來部屬，增加部屬上管理方便性
 
 * High Availability  
 [V] K3s  
@@ -39,14 +40,14 @@ nano /etc/rancher/k3s/config.yaml
 
 ## 建立第一個Server節點(初始節點)
 ```sh
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.18.15+k3s1" sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.19.1+k3s1" sh -s - server --cluster-init
 ```
 ### 部屬文件
 * [10.20.0.68的部屬文件](rke2-68-config.yaml)
 
 ## 其他的Server節點(湊成三個來建立HA)
 ```sh
-curl -sfL https://get.k3s.io | sh -s - server
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.19.1+k3s1" sh -s - server
 ```
 ### 部屬文件
 * [10.20.0.73的部屬文件](rke2-73-config.yam)
