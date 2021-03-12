@@ -51,6 +51,8 @@ curl -sfL https://get.k3s.io | sh -s - server
 ```
 cp /etc/rancher/k3s/k3s.yaml ~/config
 sudo snap install helm3 --classic
+helm3 repo add rancher-stable https://releases.rancher.com/server-charts/stable
+--kubeconfig ~/config
 ```
 
 ## 安裝憑證管理系統(支援cloudflare、http01、自簽等)
