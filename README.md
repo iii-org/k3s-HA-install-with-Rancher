@@ -4,27 +4,24 @@
 [V] Rancher  
 
 ## Node
-* 10.20.0.73
-* 10.20.0.68
-* 10.20.0.74
+172.16.0.171 / 172.16.0.172 / 172.16.0.173
 
 ## VM Manage
-URL: https://172.16.0.251:8006/
+URL: https://172.16.0.251:8006/  
 user: test-uesr
 
 ## DNS For HA
-inter-iii.k8s.csie.nuu.edu.tw  
 dev2.iiidevops.org  
 ```cmd
-C:\Users\m0724>nslookup inter-iii.k8s.csie.nuu.edu.tw
+C:\Users\m0724>nslookup dev2.iiidevops.org
 伺服器:  dnas1.iii.org.tw
 Address:  140.92.66.74
 
 未經授權的回答:
-名稱:    inter-iii.k8s.csie.nuu.edu.tw
-Addresses:  10.20.0.73
-          10.20.0.68
-          10.20.0.74
+名稱:    dev2.iiidevops.org
+Addresses:  172.16.0.172
+          172.16.0.173
+          172.16.0.171
 ```
 
 ⚠️ $K3S_CONFIG_FILE=/etc/rancher/k3s/config.yaml
