@@ -53,7 +53,7 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.19.1+k3s1" sh -s - server
 * [10.20.0.73的部屬文件](rke2-73-config.yam)
 * [10.20.0.74的部屬文件](rke2-74-config.yam)
 
-## Get Config For Helm
+## Get Config For Helm(任意Server節點)
 ```
 cp /etc/rancher/k3s/k3s.yaml ~/config
 sudo snap install helm3 --classic
