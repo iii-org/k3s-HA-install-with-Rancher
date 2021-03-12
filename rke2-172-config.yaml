@@ -1,0 +1,10 @@
+server: https://dev2.iiidevops.org:6443
+token: "interiiik8scsienuuedutwbypfsense"
+write-kubeconfig-mode: "0644"
+tls-san:
+  - "dev2.iiidevops.org"
+node-label:
+  - "nodeid=172"
+  - "org=iii"
+node-name: "k3s-172"
+node-ip: "172.16.0.172"
