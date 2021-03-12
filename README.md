@@ -43,13 +43,14 @@ Addresses:  172.16.0.172
 
 ## 每個節點建立config檔案
 ```sh
-mkdir -p /etc/rancher/k3s
+mkdir -p /etc/rancher/k3s && \
 nano /etc/rancher/k3s/config.yaml
 ```
 
 ## 建立第一個Server節點(初始節點)
 ```sh
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.19.1+k3s1" sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | sh -s - server --cluster-init
 ```
 ### 部屬文件
 * [10.20.0.68的部屬文件](rke2-68-config.yaml)
@@ -57,6 +58,7 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.19.1+k3s1" sh -s - server
 ## 其他的Server節點(湊成三個來建立HA)
 ```sh
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.19.1+k3s1" sh -s - server
+curl -sfL https://get.k3s.io | sh -s - server
 ```
 ### 部屬文件
 * [10.20.0.73的部屬文件](rke2-73-config.yam)
