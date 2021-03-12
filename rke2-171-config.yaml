@@ -1,0 +1,9 @@
+token: "interiiik8scsienuuedutwbypfsense"
+write-kubeconfig-mode: "0644"
+tls-san:
+  - "dev2.iiidevops.org"
+node-label:
+  - "nodeid=171"
+  - "org=iii"
+node-name: "k3s-171"
+node-ip: "172.16.0.171"
