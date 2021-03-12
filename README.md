@@ -1,4 +1,6 @@
 # k8s-install
+⚠️ ⚠️ 此教學若要對外有有效憑證的話，僅對Cloudflare或是其他可以免本機端憑證儲存的雲端方式有效，若要使用DNS-update或是http01 letsEncrypt等有效憑證請查詢`Cert-manager`或是`Rancher官網`
+
 * High Availability  
 [V] K3s  
 [V] Rancher  
@@ -56,7 +58,7 @@ kubectl create namespace cattle-system
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
 kubectl create namespace cert-manager
 helm3 repo add jetstack https://charts.jetstack.io
-helm3 install cert-manager jetstack/cert-manager   --namespace cert-manager   --version v1.0.4 --kubeconfig ~/config
+helm3 install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.0.4 --kubeconfig ~/config
 
 --kubeconfig ~/config
 ```
