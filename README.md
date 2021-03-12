@@ -81,7 +81,7 @@ rancher-stable/rancher  2.4.5           v2.4.5          Install Rancher Server t
 .......
 ```
 
-## Agent節點(目前系統不考慮Agent角色)
+## Agent節點(目前iiiorg系統不考慮Agent角色)
 
 ## reference
 * https://rancher.com/docs/k3s/latest/en/installation/ha-embedded/
