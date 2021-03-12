@@ -8,6 +8,10 @@
 * 10.20.0.68
 * 10.20.0.74
 
+## VM Manage
+URL: https://172.16.0.251:8006/
+user: test-uesr
+
 ## DNS For HA
 inter-iii.k8s.csie.nuu.edu.tw  
 dev2.iiidevops.org  
