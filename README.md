@@ -63,7 +63,7 @@ kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/relea
 kubectl create namespace cert-manager
 helm3 repo add jetstack https://charts.jetstack.io
 helm3 install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.0.4 --kubeconfig ~/config
-
+helm3 install rancher rancher-stable/rancher   --namespace cattle-system --set hostname=dev2.iiidevops.org --version 2.4.14 --kubeconfig ~/config
 --kubeconfig ~/config
 ```
 
