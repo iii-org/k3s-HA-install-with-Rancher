@@ -1,5 +1,6 @@
 # k3s-install
-⚠️ ⚠️ 此教學若要對外有有效憑證的話，僅對Cloudflare或是其他可以免本機端憑證儲存的雲端方式有效，若要使用DNS-update或是http01 letsEncrypt等有效憑證請查詢`Cert-manager`或是`Rancher官網`  
+⚠️ ⚠️ 此教學若要對外有有效憑證的話，僅對Cloudflare或是其他可以免本機端憑證儲存的雲端方式有效  
+⚠️ ⚠️ 若要使用DNS-update或是http01 letsEncrypt等有效憑證請查詢`Cert-manager`或是`Rancher官網`  
 ⚠️ ⚠️ 此教學限制Rancher至舊版2.4.X，因此同時對K3s支援的版本有限制，因此建議僅用於開發，不可用於Production環境。  
 ⚠️ ⚠️ 最新版本的k3s不支援本教學，因此若已有最新版本的k3s請勿使用教學安裝(會無法安裝Rancher)  
 
