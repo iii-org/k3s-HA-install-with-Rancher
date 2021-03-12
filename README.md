@@ -39,7 +39,7 @@ nano /etc/rancher/k3s/config.yaml
 
 ## 建立第一個Server節點(初始節點)
 ```sh
-curl -sfL https://get.k3s.io | sh -s - server --cluster-init
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.18.15" sh -s - server --cluster-init
 ```
 ### 部屬文件
 * [10.20.0.68的部屬文件](rke2-68-config.yaml)
