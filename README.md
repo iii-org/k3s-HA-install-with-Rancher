@@ -12,10 +12,14 @@
 ## Node
 172.16.0.171 / 172.16.0.172 / 172.16.0.173
 
+## (k8s前置環境準備工作)
 ### SetHost
 172.16.0.171  dev2-171
 172.16.0.172  dev2-172
 172.16.0.173  dev2-173
+### disable swap
+sudo swapoff -a
+sudo rm /swap.img
 
 ## VM Manage
 URL: https://172.16.0.251:8006/  
