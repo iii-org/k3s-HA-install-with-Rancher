@@ -47,6 +47,12 @@ curl -sfL https://get.k3s.io | sh -s - server
 * [10.20.0.73的部屬文件](rke2-73-config.yam)
 * [10.20.0.74的部屬文件](rke2-74-config.yam)
 
+## Get Config For Helm
+```
+cp /etc/rancher/k3s/k3s.yaml ~/config
+sudo snap install helm3 --classic
+```
+
 ## 安裝憑證管理系統(支援cloudflare、http01、自簽等)
 `helm3 install cert-manager jetstack/cert-manager   --namespace cert-manager   --version v1.0.4 --kubeconfig /home/localadmin/config`
 `helm3 install rancher rancher-stable/rancher   --namespace cattle-system --set hostname=dev2.iiidevops.org --kubeconfig /home/localadmin/config`
