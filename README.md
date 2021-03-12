@@ -53,7 +53,7 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.19.1+k3s1" sh -s - server
 curl -sfL https://get.k3s.io | sh -s - server --cluster-init
 ```
 ### 部屬文件
-* [10.20.0.68的部屬文件](rke2-68-config.yaml)
+* [172.16.0.171的部屬文件](rke2-171-config.yaml)
 
 ## 其他的Server節點(湊成三個來建立HA)
 ```sh
@@ -61,21 +61,21 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.19.1+k3s1" sh -s - server
 curl -sfL https://get.k3s.io | sh -s - server
 ```
 ### 部屬文件
-* [10.20.0.73的部屬文件](rke2-73-config.yam)
-* [10.20.0.74的部屬文件](rke2-74-config.yam)
+* [172.16.0.172的部屬文件](rke2-172-config.yaml)
+* [172.16.0.173的部屬文件](rke2-173-config.yaml)
 
 ## Get Config For Helm(任意Server節點)
 ```
-cp /etc/rancher/k3s/k3s.yaml ~/config
-sudo snap install helm3 --classic
-helm3 repo add rancher-stable https://releases.rancher.com/server-charts/stable
-kubectl create namespace cattle-system
-kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
-kubectl create namespace cert-manager
-helm3 repo add jetstack https://charts.jetstack.io
-helm3 install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.0.4 --kubeconfig ~/config
+cp /etc/rancher/k3s/k3s.yaml ~/config && \
+sudo snap install helm3 --classic && \
+helm3 repo add rancher-stable https://releases.rancher.com/server-charts/stable && \
+kubectl create namespace cattle-system && \
+kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml && \
+kubectl create namespace cert-manager && \
+helm3 repo add jetstack https://charts.jetstack.io && \
+helm3 install cert-manager jetstack/cert-manager --namespace cert-manager --version v1.0.4 --kubeconfig ~/config && \
 helm3 install rancher rancher-stable/rancher   --namespace cattle-system --set hostname=rancher.iii.k8s.csie.nuu.edu.tw --kubeconfig ~/config
---kubeconfig ~/config
+--kubeconfig ~/config && \
 ```
 
 ## Check Rancher 可用 Version
