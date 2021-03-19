@@ -1,0 +1,12 @@
+redmineUsername: admin
+redminePassword: IIIdevops123!
+redmineEmail: m0724001@gm.nuu.edu.tw
+redmineLanguage: en
+# iiidevops system disbale email function
+mailReceiver.enabled: false
+volumePermissions.enabled: true
+databaseType: postgresql
+ingress.enabled: true
+ingress.certManager: false
+ingress.hostname: redmine.iii.k8s.csie.nuu.edu.tw
+ingress.tls: true
