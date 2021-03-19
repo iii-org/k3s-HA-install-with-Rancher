@@ -1,0 +1,2 @@
+helm repo add oteemocharts https://oteemo.github.io/charts
+helm repo add bitnami https://charts.bitnami.com/bitnami

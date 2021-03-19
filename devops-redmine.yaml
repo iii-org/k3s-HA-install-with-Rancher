@@ -3,10 +3,13 @@ redminePassword: IIIdevops123!
 redmineEmail: m0724001@gm.nuu.edu.tw
 redmineLanguage: en
 # iiidevops system disbale email function
-mailReceiver.enabled: false
-volumePermissions.enabled: true
-databaseType: postgresql
-ingress.enabled: true
-ingress.certManager: false
-ingress.hostname: redmine.iii.k8s.csie.nuu.edu.tw
-ingress.tls: true
+mailReceiver:
+  enabled: false
+volumePermissions:
+  enabled: true
+ingress:
+  enabled: true
+  certManager: false
+  hostname: redmine.iii.k8s.csie.nuu.edu.tw
+  tls: true
+# let it used default mariadb

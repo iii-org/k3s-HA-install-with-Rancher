@@ -1,0 +1,18 @@
+replicaCount: 1
+OpenShift:
+  enabled: false
+ingress:
+  enabled: true
+  hosts:
+  - name: sonar.iii.k8s.csie.nuu.edu.tw
+    path: /
+initSysctl:
+  enabled: true
+  vmMaxMapCount: 524288
+  fsFileMax: 131072
+  nofile: 131072
+persistence:
+  enabled: true
+account:
+  adminPassword: admin
+  currentAdminPassword: IIIdevops123!
