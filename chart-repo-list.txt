@@ -1,2 +1,4 @@
 helm repo add oteemocharts https://oteemo.github.io/charts
 helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add harbor https://helm.goharbor.io
+helm repo add gitlab http://charts.gitlab.io/

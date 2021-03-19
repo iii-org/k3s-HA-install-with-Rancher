@@ -1,0 +1,46 @@
+expose:
+  type: ingress
+  tls:
+    enabled: true
+    certSource: auto
+  ingress:
+    hosts:
+      core: harbor.iii.k8s.csie.nuu.edu.tw
+      notary: notary.iii.k8s.csie.nuu.edu.tw
+    controller: default
+internalTLS:
+  enabled: false
+persistence:
+  enabled: true
+  persistentVolumeClaim:
+    registry: 
+      size: 20Gi
+    chartmuseum:
+      size: 5Gi
+    jobservice:
+      size: 2Gi
+    database:
+      size: 1Gi
+    redis:
+      size: 1Gi
+    trivy:
+      size: 10Gi
+externalURL: https://harbor.iii.k8s.csie.nuu.edu.tw
+harborAdminPassword: IIIdevops123!
+# In iiidevops will not let user write his own chart so this can be disable
+chartmuseum:
+  enabled: true
+# In iiidevops will only use this as info, so this can disable only use default one
+trivy:
+  enabled: true
+# In iiidevops security is not important, and this function is not used, so disable
+notary:
+  enabled: false
+database:
+  type: internal
+redis:
+  type: internal
+exporter:
+  replicas: 1
+metrics:
+  enabled: false

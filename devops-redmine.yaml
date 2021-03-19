@@ -11,5 +11,5 @@ ingress:
   enabled: true
   certManager: false
   hostname: redmine.iii.k8s.csie.nuu.edu.tw
-  tls: true
+  tls: false
 # let it used default mariadb

@@ -1,0 +1,109 @@
+global:
+  edition: ce
+  hosts:
+    domain: gitlab.iii.k8s.csie.nuu.edu.tw
+    https: false
+  ## doc/charts/globals.md#configure-ingress-settings
+  ingress:
+    class: traefik
+    configureCertmanager: false
+    enabled: true
+    tls: {}
+  #initialRootPassword:
+  #  secret: devops-gitlab-initial-root-password
+  #  key: password
+  ## doc/charts/globals.md#configure-postgresql-settings
+  #psql:
+  #  password:
+  #    secret: devops-db-postgresql
+  #    key: postgresql-password
+  #  host: devops-db-postgresql-headless
+  #  port: 5432
+  #  username: postgres
+  #  database: gitlab
+  #redis:
+  #  password:
+  #    enabled: true
+  #    secret: devops-redis
+  #    key: redis-password
+  #  host: devops-redis-headless
+  #  port: 6379
+  pages:
+    enabled: false
+  ## Rails generic setting, applicable to all Rails-based containers
+  ## 暫時
+  rails:
+    bootsnap:
+      enabled: true
+  ## doc/charts/globals.md#configure-gitaly-settings
+  gitaly:
+    enabled: true
+  ## 必須啟動服務
+  ## doc/charts/globals.md#configure-minio-settings
+  ## 關閉Minio說明(除非有外部儲存空間否則必須開啟)
+  ## https://docs.gitlab.com/charts/advanced/external-object-storage/
+  minio:
+    enabled: true
+  ## doc/charts/globals.md#configure-appconfig-settings
+  ## Rails based portions of this chart share many settings
+  appConfig:
+    ## doc/charts/globals.md#general-application-settings
+    enableUsagePing: false
+    enableSeatLink: false
+    defaultCanCreateGroup: false
+    defaultProjectsFeatures:
+      issues: false
+      mergeRequests: true
+      wiki: false
+      snippets: false
+      builds: false
+    artifacts:
+      enabled: false
+    # 關閉Minio用
+    #object_store:
+    #  enabled: false
+    #  connection:
+    #    secret: gitlab-rails-storage
+    
+upgradeCheck:
+  enabled: false
+# 節省CPU資源
+prometheus:
+  install: false
+# 必須元件(採用共享)
+# https://docs.gitlab.com/charts/advanced/external-redis/index.html
+redis:
+  install: true
+# 節省CPU資源
+gitlab-runner:
+  install: false
+# 自簽所以不須cert-manager
+certmanager:
+  install: false
+registry:
+  enabled: false
+# 採用ingress addon(rancher或是其他內建的都OK)
+nginx-ingress:
+  enabled: false
+postgresql:
+  install: true
+gitlab:
+  # unicorn已淘汰，但是因為iiidevops僅支援舊版因此保留
+  #unicorn:
+  #  enabled: false
+  migrations:
+    enabled: true
+  webservice:
+    minReplicas: 1
+    maxReplicas: 1
+  sidekiq:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 1
+  gitlab-shell:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 1
+persistence:
+  enabled: true
+  size: 10Gi
