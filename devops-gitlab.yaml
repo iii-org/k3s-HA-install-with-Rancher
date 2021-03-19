@@ -1,7 +1,7 @@
 global:
   edition: ce
   hosts:
-    domain: gitlab.iii.k8s.csie.nuu.edu.tw
+    domain: iii.k8s.csie.nuu.edu.tw
     https: false
   ## doc/charts/globals.md#configure-ingress-settings
   ingress:
