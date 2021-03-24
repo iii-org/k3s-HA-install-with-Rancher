@@ -1,0 +1,3 @@
+"harbor.iii.k8s.csie.nuu.edu.tw":
+    endpoint:
+      - "https://harbor.iii.k8s.csie.nuu.edu.tw"
