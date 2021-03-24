@@ -110,3 +110,4 @@ rancher-stable/rancher  2.4.5           v2.4.5          Install Rancher Server t
 * https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/
 * https://rancher.com/docs/rke/latest/en/installation/
 * https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/
+* https://llimon.github.io/post/k3s-registry/
