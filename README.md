@@ -103,6 +103,11 @@ rancher-stable/rancher  2.4.5           v2.4.5          Install Rancher Server t
 .......
 ```
 
+## 徹底清除
+/usr/local/bin/k3s-uninstall.sh
+## 查詢錯誤訊息
+journalctl -u k3s
+
 ## Agent節點(目前iiiorg系統不考慮Agent角色)
 
 ## reference
@@ -111,3 +116,4 @@ rancher-stable/rancher  2.4.5           v2.4.5          Install Rancher Server t
 * https://rancher.com/docs/rke/latest/en/installation/
 * https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/
 * https://llimon.github.io/post/k3s-registry/
+* https://github.com/rancher/docs/commit/ef866a7ea7b2ff3c41f81523e4dc197634237a64
